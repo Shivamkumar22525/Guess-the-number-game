@@ -1,0 +1,35 @@
+body{
+    background-color: #212121;
+    color: #fff;
+}
+.start{
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}
+.intro{
+   
+    box-sizing: border-box;    
+    text-align: center;
+    background-color: #303030;
+    height: 400px;
+    width: 400px;
+}
+#number{
+    display: flex;
+    justify-content: center;
+    width:fit-content;
+    height: 25px;
+    margin-left: 110px;
+    border-style: none;
+    border: 5px solid black;
+    
+}
+#btn{
+    display: flex;
+    justify-content: center;    
+    margin-top: 10px;
+    margin-left: 170px;
+    width: fit-content;
+    background-color: #212121;
+}
