@@ -13,7 +13,7 @@ const start = document.createElement('button');
 
 let preGusses = [];
 let startGuess = 0;
-
+console.log(randomNumber)
 let playGame = true;
 
 
@@ -22,7 +22,7 @@ if(playGame){
         // console.log(event.key)
       if (event.key === 'Enter') {
         event.preventDefault();        
-        const num = parseInt(userInput.value);
+        const num = parseInt(userInput.value);        
         console.log(num);
         validateguess(num);
       }
@@ -45,13 +45,17 @@ function validateguess(num){
     }else if(num > 100){
         alert("Number should be less than equals to 100");
         userInput.val = '';
-    }else{
-        
-            preGusses.push(num);
+    }else{  preGusses.push(num);
             if(startGuess === 9){
-                displayGuess(num);
-                displayMessage(`Game Over!!! Random number was ${randomNumber}`);
-                endGame();
+                if(num==randomNumber){
+                    checkGuess(num);
+                    displayGuess(num);
+                }else{
+                    displayGuess(num);
+                    displayMessage(`Game Over!!! Random number was ${randomNumber}`);                
+                    endGame();
+                }
+                
             }else{
                 displayGuess(num);
                 checkGuess(num);
@@ -60,7 +64,7 @@ function validateguess(num){
 }
 
 function checkGuess(num){
-        if(num === randomNumber){
+        if(num === randomNumber){            
             displayMessage(`You guessed right`);
             endGame();
         }else if(num < randomNumber){
