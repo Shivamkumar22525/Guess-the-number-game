@@ -71,7 +71,8 @@ input[type="button"] {
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
-    cursor: pointer;    
+    cursor: pointer;
+    width: 100%;
     max-width: 400px;
 }
 
